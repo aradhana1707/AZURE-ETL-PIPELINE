@@ -30,7 +30,7 @@
 
 ### .Deduplication
 
-###. Schema enforcement
+### .Schema enforcement
 
 ### Processed data is stored in the Silver Layer in ADLS.
 

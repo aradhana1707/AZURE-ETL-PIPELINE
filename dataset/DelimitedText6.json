@@ -1,0 +1,30 @@
+{
+	"name": "DelimitedText6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"url": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().url",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

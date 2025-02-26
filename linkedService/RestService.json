@@ -1,0 +1,12 @@
+{
+	"name": "RestService",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://github.com/aradhana1707/AZURE-ETL-PIPELINE/tree/main/ETL%20DATA",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

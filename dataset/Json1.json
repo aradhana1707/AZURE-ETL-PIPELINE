@@ -1,0 +1,33 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStoragels",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "scratch.json",
+				"fileSystem": "parameter"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"source_url": {
+					"type": "string"
+				},
+				"sink_folder": {
+					"type": "string"
+				},
+				"sink_file": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

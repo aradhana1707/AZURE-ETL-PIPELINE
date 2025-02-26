@@ -1,0 +1,9 @@
+{
+	"name": "aradhanadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6c2bcb5e-d98e-41c2-8cd7-5492a675c4cc",
+		"tenantId": "97ba0905-f913-4141-a648-ab7d56d9cb2c"
+	}
+}

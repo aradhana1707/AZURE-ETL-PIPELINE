@@ -1,0 +1,13 @@
+{
+	"name": "RestServicenew",
+	"properties": {
+		"description": "pipeline",
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://github.com",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

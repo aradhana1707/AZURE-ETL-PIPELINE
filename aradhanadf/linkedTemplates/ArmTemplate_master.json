@@ -1,0 +1,334 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "aradhanadf"
+		},
+		"AzureDataLakeStorage_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage3'"
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage4'"
+		},
+		"AzureDataLakeStorage5_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage5'"
+		},
+		"AzureDataLakeStoragels_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragels'"
+		},
+		"AzureDataLakeStoragepost_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragepost'"
+		},
+		"PostgreSql1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'PostgreSql1'"
+		},
+		"PostgreSql2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'PostgreSql2'"
+		},
+		"newsinklink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'newsinklink'"
+		},
+		"sinkgitlink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'sinkgitlink'"
+		},
+		"storagedatalake_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'storagedatalake'"
+		},
+		"storagezip_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'storagezip'"
+		},
+		"AzureDataLakeStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragels_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragepost_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"HttpServer_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com"
+		},
+		"HttpServergit_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/"
+		},
+		"Httplinkedservice_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com"
+		},
+		"PostgreSql1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost"
+		},
+		"PostgreSql1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "postgres"
+		},
+		"PostgreSql1_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "ara"
+		},
+		"PostgreSql2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost"
+		},
+		"PostgreSql2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "postgres"
+		},
+		"PostgreSql2_properties_typeProperties_username": {
+			"type": "string",
+			"defaultValue": "ara"
+		},
+		"RestService_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://api.github.com/repos/aradhana1707/AZURE-ETL-PIPELINE/contents/ETL%20DATA"
+		},
+		"RestServicenew_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/"
+		},
+		"newsinklink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"newsourcelink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com"
+		},
+		"sinkgitlink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"storagedatalake_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arapost.dfs.core.windows.net/"
+		},
+		"storagezip_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://aradhanastorage.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "aradhanadf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage_accountKey')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"AzureDataLakeStorage3_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage3_accountKey')]"
+					},
+					"AzureDataLakeStorage4_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage4_accountKey')]"
+					},
+					"AzureDataLakeStorage5_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage5_accountKey')]"
+					},
+					"AzureDataLakeStoragels_accountKey": {
+						"value": "[parameters('AzureDataLakeStoragels_accountKey')]"
+					},
+					"AzureDataLakeStoragepost_accountKey": {
+						"value": "[parameters('AzureDataLakeStoragepost_accountKey')]"
+					},
+					"newsinklink_accountKey": {
+						"value": "[parameters('newsinklink_accountKey')]"
+					},
+					"sinkgitlink_accountKey": {
+						"value": "[parameters('sinkgitlink_accountKey')]"
+					},
+					"storagedatalake_accountKey": {
+						"value": "[parameters('storagedatalake_accountKey')]"
+					},
+					"storagezip_accountKey": {
+						"value": "[parameters('storagezip_accountKey')]"
+					},
+					"AzureDataLakeStorage_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage3_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage3_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage4_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage4_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage5_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage5_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStoragels_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragels_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStoragepost_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragepost_properties_typeProperties_url')]"
+					},
+					"HttpServer_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer_properties_typeProperties_url')]"
+					},
+					"HttpServergit_properties_typeProperties_url": {
+						"value": "[parameters('HttpServergit_properties_typeProperties_url')]"
+					},
+					"Httplinkedservice_properties_typeProperties_url": {
+						"value": "[parameters('Httplinkedservice_properties_typeProperties_url')]"
+					},
+					"RestService_properties_typeProperties_url": {
+						"value": "[parameters('RestService_properties_typeProperties_url')]"
+					},
+					"RestServicenew_properties_typeProperties_url": {
+						"value": "[parameters('RestServicenew_properties_typeProperties_url')]"
+					},
+					"newsinklink_properties_typeProperties_url": {
+						"value": "[parameters('newsinklink_properties_typeProperties_url')]"
+					},
+					"newsourcelink_properties_typeProperties_url": {
+						"value": "[parameters('newsourcelink_properties_typeProperties_url')]"
+					},
+					"sinkgitlink_properties_typeProperties_url": {
+						"value": "[parameters('sinkgitlink_properties_typeProperties_url')]"
+					},
+					"storagedatalake_properties_typeProperties_url": {
+						"value": "[parameters('storagedatalake_properties_typeProperties_url')]"
+					},
+					"storagezip_properties_typeProperties_url": {
+						"value": "[parameters('storagezip_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "aradhanadf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'aradhanadf_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "aradhanadf_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"PostgreSql1_password": {
+						"value": "[parameters('PostgreSql1_password')]"
+					},
+					"PostgreSql2_password": {
+						"value": "[parameters('PostgreSql2_password')]"
+					},
+					"PostgreSql1_properties_typeProperties_server": {
+						"value": "[parameters('PostgreSql1_properties_typeProperties_server')]"
+					},
+					"PostgreSql1_properties_typeProperties_database": {
+						"value": "[parameters('PostgreSql1_properties_typeProperties_database')]"
+					},
+					"PostgreSql1_properties_typeProperties_username": {
+						"value": "[parameters('PostgreSql1_properties_typeProperties_username')]"
+					},
+					"PostgreSql2_properties_typeProperties_server": {
+						"value": "[parameters('PostgreSql2_properties_typeProperties_server')]"
+					},
+					"PostgreSql2_properties_typeProperties_database": {
+						"value": "[parameters('PostgreSql2_properties_typeProperties_database')]"
+					},
+					"PostgreSql2_properties_typeProperties_username": {
+						"value": "[parameters('PostgreSql2_properties_typeProperties_username')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'aradhanadf_ArmTemplate_1')]"
+			]
+		}
+	]
+}

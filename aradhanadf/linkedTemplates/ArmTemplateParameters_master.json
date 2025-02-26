@@ -1,0 +1,123 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "aradhanadf"
+		},
+		"AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage5_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStoragels_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStoragepost_accountKey": {
+			"value": ""
+		},
+		"PostgreSql1_password": {
+			"value": ""
+		},
+		"PostgreSql2_password": {
+			"value": ""
+		},
+		"newsinklink_accountKey": {
+			"value": ""
+		},
+		"sinkgitlink_accountKey": {
+			"value": ""
+		},
+		"storagedatalake_accountKey": {
+			"value": ""
+		},
+		"storagezip_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragels_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStoragepost_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"HttpServer_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"HttpServergit_properties_typeProperties_url": {
+			"value": "https://github.com/"
+		},
+		"Httplinkedservice_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"PostgreSql1_properties_typeProperties_server": {
+			"value": "localhost"
+		},
+		"PostgreSql1_properties_typeProperties_database": {
+			"value": "postgres"
+		},
+		"PostgreSql1_properties_typeProperties_username": {
+			"value": "ara"
+		},
+		"PostgreSql2_properties_typeProperties_server": {
+			"value": "localhost"
+		},
+		"PostgreSql2_properties_typeProperties_database": {
+			"value": "postgres"
+		},
+		"PostgreSql2_properties_typeProperties_username": {
+			"value": "ara"
+		},
+		"RestService_properties_typeProperties_url": {
+			"value": "https://api.github.com/repos/aradhana1707/AZURE-ETL-PIPELINE/contents/ETL%20DATA"
+		},
+		"RestServicenew_properties_typeProperties_url": {
+			"value": "https://github.com/"
+		},
+		"newsinklink_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"newsourcelink_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"sinkgitlink_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"storagedatalake_properties_typeProperties_url": {
+			"value": "https://arapost.dfs.core.windows.net/"
+		},
+		"storagezip_properties_typeProperties_url": {
+			"value": "https://aradhanastorage.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
